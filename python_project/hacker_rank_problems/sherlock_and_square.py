@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/challenges/sherlock-and-squares/problem?h_r=internal-search
+# https://www.hackerrank.com/challenges/sherlock-and-squares/problem?h_r=internal-search
 from math import *
 
 

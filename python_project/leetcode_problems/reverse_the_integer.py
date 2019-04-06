@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/reverse-integer/
+# https://leetcode.com/problems/reverse-integer/
 def reversing_the_number():
     user_input = int(input("enter the number :"))
     if user_input>0:

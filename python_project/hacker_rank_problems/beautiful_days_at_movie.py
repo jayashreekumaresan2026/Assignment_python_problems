@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem?h_r=internal-search
+#https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem?h_r=internal-search
 def beautiful_days_at_movie(starting_day, ending_day, divisor):
     count = 0
     for i in range(starting_day, ending_day+1):

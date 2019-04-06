@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/challenges/halloween-sale/problem?h_r=internal-search
+# https://www.hackerrank.com/challenges/halloween-sale/problem?h_r=internal-search
 def halloween_sale(staring_point, difference, ending_point, dollor):
     new_array=[staring_point]
     count=0

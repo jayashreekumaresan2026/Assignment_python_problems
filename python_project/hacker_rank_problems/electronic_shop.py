@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/challenges/electronics-shop/problem?h_r=internal-search
+# https://www.hackerrank.com/challenges/electronics-shop/problem?h_r=internal-search
 def electronic_shop(amount, keyboard, usb):
     array = []
     for i in range(0, len(keyboard)):

@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/challenges/strange-advertising/problem?h_r=internal-search
+# https://www.hackerrank.com/challenges/strange-advertising/problem?h_r=internal-search
 import math
 
 number_of_day = int(input())

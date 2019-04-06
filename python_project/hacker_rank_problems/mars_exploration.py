@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/challenges/mars-exploration/problem?h_r=internal-search
+# https://www.hackerrank.com/challenges/mars-exploration/problem?h_r=internal-search
 def mars_exploration():
     S = input().strip()
     count = 0
