@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/utopian-tree/problem?h_r=internal-search
 def utopian_tree(list_array):
     sum = 0
     index_array = list_array[-1]

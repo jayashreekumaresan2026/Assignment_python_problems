@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/finding-the-percentage/problem?h_r=internal-search
 def find_percentage():
     new_array = []
     second_array = []

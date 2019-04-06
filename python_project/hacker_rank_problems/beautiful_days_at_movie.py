@@ -12,3 +12,4 @@ starting_day = 20
 ending_day = 23
 divisor = 6
 beautiful_days_at_movie(starting_day, ending_day, divisor)
+
