@@ -1,6 +1,6 @@
 # https://www.hackerrank.com/challenges/electronics-shop/problem?h_r=internal-search
 def electronic_shop(amount, keyboard, usb):
-    array = []
+    array = [-1]
     for i in range(0, len(keyboard)):
         for j in range(0, len(usb)):
             if keyboard[i] + usb[j] < amount:
