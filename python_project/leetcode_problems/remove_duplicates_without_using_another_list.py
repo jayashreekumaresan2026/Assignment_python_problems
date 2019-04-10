@@ -1,3 +1,4 @@
+#https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 def removeDuplicates():
     nums=[0,0,1,1]
     lst = sorted(list(set(nums)))

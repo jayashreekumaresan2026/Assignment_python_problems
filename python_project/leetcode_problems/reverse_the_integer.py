@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/reverse-integer/
 def reversing_the_number():
     user_input = int(input("enter the number :"))
-    if user_input>0:
+    if user_input>=0:
         user_input = str(user_input)
         user_input = user_input[::-1]
         print("the reversed number is:",int(user_input))
