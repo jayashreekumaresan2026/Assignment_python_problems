@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="14a2e89d-3dfc-44c2-92f4-866d32305c91" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hacker_rank_problems/minimum_absolute_difference_in_an_array.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode_problems/minimum_size_subarray_sum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode_problems/arranging_coins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode_problems/majority_element.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,15 +18,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="221">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode_problems/third_maximum_number.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="52" selection-start-column="52" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode_problems/majority_element.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode_problems/arranging_coins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -39,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode_problems/minimum_size_subarray_sum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state>
+              <caret column="97" selection-start-column="97" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -80,6 +110,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Unit Test" />
         <option value="Python Script" />
       </list>
     </option>
@@ -132,16 +163,21 @@
         <option value="$PROJECT_DIR$/leetcode_problems/find_missing_number.py" />
         <option value="$PROJECT_DIR$/leetcode_problems/length_of_last_word.py" />
         <option value="$PROJECT_DIR$/hacker_rank_problems/stranger_counter.py" />
-        <option value="$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py" />
-        <option value="$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py" />
         <option value="$PROJECT_DIR$/hacker_rank_problems/minimum_absolute_difference_in_an_array.py" />
         <option value="$PROJECT_DIR$/leetcode_problems/minimum_size_subarray_sum.py" />
+        <option value="$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py" />
+        <option value="$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py" />
+        <option value="$PROJECT_DIR$/hacker_rank_problems/caesar_cipher.py" />
+        <option value="$PROJECT_DIR$/hacker_rank_problems/cavity_map.py" />
+        <option value="$PROJECT_DIR$/leetcode_problems/third_maximum_number.py" />
+        <option value="$PROJECT_DIR$/leetcode_problems/majority_element.py" />
+        <option value="$PROJECT_DIR$/leetcode_problems/arranging_coins.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="460" />
-    <option name="width" value="960" />
+    <option name="x" value="489" />
+    <option name="width" value="877" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -197,8 +233,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.jumping_on_the_cloud">
-    <configuration name="jumping_on_the_cloud" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.arranging_coins">
+    <configuration name="almost_sorted" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -210,7 +246,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -219,7 +255,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="length_of_last_word" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="arranging_coins" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -231,7 +267,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode_problems/length_of_last_word.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode_problems/arranging_coins.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,28 +276,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="median_of_two_sorted_array" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode_problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode_problems/median_of_two_sorted_array.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="minimum_absolute_difference_in_an_array" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cavity_map" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,7 +288,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hacker_rank_problems/minimum_absolute_difference_in_an_array.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hacker_rank_problems/cavity_map.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -282,7 +297,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="minimum_size_subarray_sum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="majority_element" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -294,7 +309,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode_problems/minimum_size_subarray_sum.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode_problems/majority_element.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="third_maximum_number" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/leetcode_problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetcode_problems/third_maximum_number.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,11 +341,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.jumping_on_the_cloud" />
-        <item itemvalue="Python.minimum_size_subarray_sum" />
-        <item itemvalue="Python.minimum_absolute_difference_in_an_array" />
-        <item itemvalue="Python.length_of_last_word" />
-        <item itemvalue="Python.median_of_two_sorted_array" />
+        <item itemvalue="Python.arranging_coins" />
+        <item itemvalue="Python.majority_element" />
+        <item itemvalue="Python.third_maximum_number" />
+        <item itemvalue="Python.cavity_map" />
+        <item itemvalue="Python.almost_sorted" />
       </list>
     </recent_temporary>
   </component>
@@ -327,16 +363,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="460" y="0" width="960" height="728" extended-state="0" />
+    <frame x="489" y="0" width="877" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28958786" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.340882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32242227" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3633388" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33781514" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.34285715" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -502,11 +538,36 @@
           <line>8</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/leetcode_problems/arranging_coins.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/leetcode_problems/arranging_coins.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/leetcode_problems/arranging_coins.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>check_list.sort()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>operations</expression-string>
         <language-id>Python</language-id>
@@ -784,13 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py">
+    <entry file="file://$PROJECT_DIR$/leetcode_problems/minimum_size_subarray_sum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state>
+          <caret column="97" selection-start-column="97" selection-end-column="97" />
         </state>
       </provider>
     </entry>
@@ -801,10 +859,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode_problems/minimum_size_subarray_sum.py">
+    <entry file="file://$PROJECT_DIR$/hacker_rank_problems/jumping_on_the_cloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hacker_rank_problems/caesar_cipher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hacker_rank_problems/cavity_map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hacker_rank_problems/almost_sorted.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode_problems/third_maximum_number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="52" selection-start-column="52" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode_problems/majority_element.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode_problems/arranging_coins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
