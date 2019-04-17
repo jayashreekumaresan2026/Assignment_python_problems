@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/missing-number/
+# https://leetcode.com/problems/missing-number/
 def find_missing_number(user_input):
     user_input.sort()
     endValue = user_input[-1]
