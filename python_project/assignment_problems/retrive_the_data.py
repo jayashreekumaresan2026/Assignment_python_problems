@@ -11,7 +11,7 @@ from datetime import date
 from collections import Counter
 
 # collections is used to store collection of data like list,dictionary ,set,tuple
-df = pd.read_csv('store.csv')
+data_store = pd.read_csv('store.csv')
 # df means a dataframe .It is the object in pandas.we can use any variable to store .i used to store the retiving data
 # usually dataframe is used to represent the data in rows and columns from tabular or excel sheet data
 # inside the bracket we can mention the path of the csv file
@@ -20,15 +20,14 @@ data_location = pd.read_csv('location.csv')
 # created a global dictionary variable
 dictionary = {}
 
-
 # List all stores which have build_area greater than 4000
-def list_of_stores_greater_than_4000(df):
+def list_of_stores_greater_than_4000():
     # getting the df data as a input
     list_of_store_name = []
     # index shows the index_value for each rows in the data.it is necessary to specify
     # rows is the variable we can use any other attributes .i used rows to retrive the data or columns
     # df.iterrows will iterate over the rows as (index,series) pairs .series means a value in the file
-    for index, rows in df.iterrows():
+    for index, rows in data_store.iterrows():
         # used dictionary to store the one columns has a key (store) and another columns a value(built_area)
         dictionary[rows[0]] = rows[1]
     for key, value in dictionary.items():
@@ -36,16 +35,18 @@ def list_of_stores_greater_than_4000(df):
         if value > 4000:
             # append the store name
             list_of_store_name.append(key)
-    print(list_of_store_name)
+    return list_of_store_name
 
- list_of_stores_greater_than_4000(df)
-
+print(list_of_stores_greater_than_4000())
+print()
 
 # Find country having the most number of stores
 i = -1
-def maximum_store_in_a_country(df):
+
+
+def maximum_store_in_a_country():
     new_list = []
-    for index, rows in df.iterrows():
+    for index, rows in data_store.iterrows():
         # converted the data from integer to string
         new_list.append(str(rows[3]))
     # used counter to count the number of times the value occurs in the list
@@ -56,6 +57,7 @@ def maximum_store_in_a_country(df):
     max_value = sorted(converted_into_dictionary.values())
     # call the other function by passing the parameter
     maximum_store_in_the_country(max_value, converted_into_dictionary, i)
+
 
 
 def maximum_store_in_the_country(max_value, result_in_dictionary, i):
@@ -83,11 +85,11 @@ def maximum_store_in_the_country(max_value, result_in_dictionary, i):
         print(country_list)
 
 
-maximum_store_in_a_country(df)
-
+maximum_store_in_a_country()
+print()
 
 # Find the total build_area of all stores built last year
-def stores_built_in_last_year(df):
+def stores_built_in_last_year():
     split_the_date = []
     no_of_bulit_area = []
     # take the current year to find the last year details
@@ -99,27 +101,27 @@ def stores_built_in_last_year(df):
     last_year = int(split_the_date[0]) - 1
     # convert to string to apply the slicing
     split_date = str(last_year)
-    for index, rows in df.iterrows():
+    for index, rows in data_store.iterrows():
         dictionary[rows[2]] = rows[1]
     # extracted last two number in the year and compare with user_value
     for key, value in dictionary.items():
         if split_date[-2:] == key[-2:]:
             no_of_bulit_area.append(value)
 
-    print(no_of_bulit_area)
+    return no_of_bulit_area
 
 
-stores_built_in_last_year(df)
-
+print(stores_built_in_last_year())
+print()
 
 # Find all stores which were opened on a weekend (Saturday or Sunday)
-def find_the_store_opened_in_weekend(df):
+def find_the_store_opened_in_weekend():
     date_list = []
     week_days_name_list = []
     store_list = []
     final_store_list = []
     check_list = ['Saturday', 'Sunday']
-    for index, rows in df.iterrows():
+    for index, rows in data_store.iterrows():
         date_list.append(rows[2])
         store_list.append(rows[0])
     my_dictionary = {'date_of_opening': date_list}
@@ -138,18 +140,18 @@ def find_the_store_opened_in_weekend(df):
     for key, value in combining_the_dict.items():
         if value in check_list:
             final_store_list.append(key)
-    print(final_store_list)
+    return final_store_list
 
 
-find_the_store_opened_in_weekend(df)
-
+print(find_the_store_opened_in_weekend())
+print()
 
 # List stores which are located in a city containing character `z` in it
 def list_store_located_in_z_city():
     city_name_list = []
     store_name_list = []
     output_store_list = []
-    for index, rows in df.iterrows():
+    for index, rows in data_store.iterrows():
         store_name_list.append(rows[0])
     # count the no of occurrences of the store
     finding_the_occurrence_of_store_in_the_file = Counter(store_name_list)
@@ -166,18 +168,18 @@ def list_store_located_in_z_city():
         # check the character is present in the name of the city
         if "z" in value:
             output_store_list.append(key)
-    print(output_store_list)
+    return output_store_list
 
 
-list_store_located_in_z_city()
-
+print(list_store_located_in_z_city())
+print()
 
 # Calculate number of stores in each City
 def calculate_number_of_stores():
     pincode_list_in_store = []
     pincode_data_in_location = []
     city_data_in_location = []
-    for index, rows in df.iterrows():
+    for index, rows in data_store.iterrows():
         pincode_list_in_store.append(rows[3])
     # count the no of stores present in the store data  using primary key
     counting_the_store_occurrence = Counter(pincode_list_in_store)
@@ -189,15 +191,16 @@ def calculate_number_of_stores():
     # wrapping the primary key and city data in  a dictionary
     combining_the_data = dict(zip(pincode_data_in_location, city_data_in_location))
     for key, value in result_in_dictionary.items():
-        temp1 = key
-        temp2 = value
+        store_key = key
+        store_values = value
         # check the each store and assign to corresponding city in the data
         for keys, values in combining_the_data.items():
-            if temp1 == keys:
-                dictionary[values] = temp2
+            if store_key == keys:
+                dictionary[values] = store_values
             else:
                 continue
-    print(dictionary)
+    return dictionary
 
 
-calculate_number_of_stores()
+print(calculate_number_of_stores())
+print()
