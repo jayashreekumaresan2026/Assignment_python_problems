@@ -38,13 +38,11 @@ def list_of_stores_greater_than_4000(df):
             list_of_store_name.append(key)
     print(list_of_store_name)
 
+ list_of_stores_greater_than_4000(df)
 
-# list_of_stores_greater_than_4000(df)
-#
+
 # Find country having the most number of stores
 i = -1
-
-
 def maximum_store_in_a_country(df):
     new_list = []
     for index, rows in df.iterrows():
