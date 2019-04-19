@@ -1,8 +1,8 @@
-# pandas ia a python data analysis library most widely used for data munging
-# munging means the example:a person was rolled by long wire ,python is used to arrange in proper way
+# pandas is used for data analysis  most widely used for data munging
+# munging means ( example:a person is rolled by long wire ),python is used to arrange in proper way
 # pandas is used to analysis the data in easier and faster way
 # we can do same work in excel but for large data it will be difficult to process
-# it takes the data from csv(comma seperated value),excel,sql(structure query language )
+# it takes the data from csv(comma separated value),excel,sql(structure query language )
 import pandas as pd
 # usually we can use pandas.command in the code instead of that we can use pd.command
 # import pandas
@@ -12,10 +12,10 @@ from collections import Counter
 
 # collections is used to store collection of data like list,dictionary ,set,tuple
 df = pd.read_csv('store.csv')
-# df means a datafame .It is the object in pandas.we can use any variable to store .i used to store the retiving data
+# df means a dataframe .It is the object in pandas.we can use any variable to store .i used to store the retiving data
 # usually dataframe is used to represent the data in rows and columns from tabular or excel sheet data
 # inside the bracket we can mention the path of the csv file
-# There are different filetype can pandas work with pd.filetype .which filetype the pandas want to read inmy case. i gave  csv file as a input to the pandas
+# There are different filetype can pandas work with pd.filetype .which filetype the pandas want to read in my case. i gave  csv file as a input to the pandas
 data_location = pd.read_csv('location.csv')
 # created a global dictionary variable
 dictionary = {}
@@ -39,8 +39,8 @@ def list_of_stores_greater_than_4000(df):
     print(list_of_store_name)
 
 
-list_of_stores_greater_than_4000(df)
-
+# list_of_stores_greater_than_4000(df)
+#
 # Find country having the most number of stores
 i = -1
 
@@ -92,88 +92,113 @@ maximum_store_in_a_country(df)
 def stores_built_in_last_year(df):
     split_the_date = []
     no_of_bulit_area = []
-    #take the current year to find the last year details
+    # take the current year to find the last year details
     today = str(date.today())
-    #split is used to find only the year in the date
+    # split is used to find only the year in the date
     for i in today.split("-"):
         split_the_date.append(i)
-     #finded the last year
+    # finded the last year
     last_year = int(split_the_date[0]) - 1
-    #convert to string to apply the slicing
+    # convert to string to apply the slicing
     split_date = str(last_year)
     for index, rows in df.iterrows():
         dictionary[rows[2]] = rows[1]
-    #extracted last two number in the year and compare with user_value
+    # extracted last two number in the year and compare with user_value
     for key, value in dictionary.items():
         if split_date[-2:] == key[-2:]:
             no_of_bulit_area.append(value)
 
     print(no_of_bulit_area)
 
+
 stores_built_in_last_year(df)
 
-#Find all stores which were opened on a weekend (Saturday or Sunday)
+
+# Find all stores which were opened on a weekend (Saturday or Sunday)
 def find_the_store_opened_in_weekend(df):
     date_list = []
     week_days_name_list = []
     store_list = []
-    final_store_list=[]
-    check_list=['Saturday','Sunday']
+    final_store_list = []
+    check_list = ['Saturday', 'Sunday']
     for index, rows in df.iterrows():
         date_list.append(rows[2])
         store_list.append(rows[0])
     my_dictionary = {'date_of_opening': date_list}
-    #dataframe is used to make the dictionary or list in the rows and columns
+    # dataframe is used to make the dictionary or list in the rows and columns
     df = pd.DataFrame(my_dictionary)
-    #the dataframe read the input as a string rather then datetime object.so it is difficult to perform an operation.
-    #to_datatime helps to convert string datatime to python datetime object
+    # the dataframe read the input as a string rather then datetime object.so it is difficult to perform an operation.
+    # to_datatime helps to convert string datatime to python datetime object
     df['date_of_opening'] = pd.to_datetime(df['date_of_opening'])
-    #the date is converted into week_days_name by using dt is accessor object for datatimelike  and day_name()
-    #is a function to represent date in days
+    # the date is converted into week_days_name by using dt is accessor object for datatimelike  and day_name()
+    # is a function to represent date in days
     df['week_days_names'] = df['date_of_opening'].dt.day_name()
     for index, rows in df.iterrows():
         week_days_name_list.append(rows[1])
-    #zip is used to combine the different entity into single entity
-    combining_the_dict=dict(zip(store_list,week_days_name_list))
-    for key,value in combining_the_dict.items():
+    # zip is used to combine the different entity into single entity
+    combining_the_dict = dict(zip(store_list, week_days_name_list))
+    for key, value in combining_the_dict.items():
         if value in check_list:
             final_store_list.append(key)
     print(final_store_list)
 
+
 find_the_store_opened_in_weekend(df)
 
-#List stores which are located in a city containing character `z` in it
+
+# List stores which are located in a city containing character `z` in it
 def list_store_located_in_z_city():
     city_name_list = []
     store_name_list = []
-    new_store_list = []
+    output_store_list = []
     for index, rows in df.iterrows():
         store_name_list.append(rows[0])
+    # count the no of occurrences of the store
+    finding_the_occurrence_of_store_in_the_file = Counter(store_name_list)
+    # assign into the dictionary
+    converting_into_dictionary = dict(finding_the_occurrence_of_store_in_the_file)
+    # extract only the keys from the store data
+    extract_keys_from_the_dict = converting_into_dictionary.keys()
     for index, rows in data_location.iterrows():
         city_name_list.append(rows[1])
-    dictionary_ = dict(zip(store_name_list, city_name_list))
-    #check with the city having the character z in it"
+    # wrappe the store_data and city name for process
+    dictionary_ = dict(zip(extract_keys_from_the_dict, city_name_list))
+    # check with the city having the character z in it"
     for key, value in dictionary_.items():
+        # check the character is present in the name of the city
         if "z" in value:
-            new_store_list.append(key)
-    print(new_store_list)
+            output_store_list.append(key)
+    print(output_store_list)
+
 
 list_store_located_in_z_city()
 
-#Calculate number of stores in each City
+
+# Calculate number of stores in each City
 def calculate_number_of_stores():
-    store_list = []
-    city_data = []
+    pincode_list_in_store = []
+    pincode_data_in_location = []
+    city_data_in_location = []
     for index, rows in df.iterrows():
-        store_list.append(rows[0])
-    counting_the_store_occurrence = Counter(store_list)
+        pincode_list_in_store.append(rows[3])
+    # count the no of stores present in the store data  using primary key
+    counting_the_store_occurrence = Counter(pincode_list_in_store)
+    # assign as a dictionary
     result_in_dictionary = dict(counting_the_store_occurrence)
     for index, rows in data_location.iterrows():
-        city_data.append(rows[1])
-    combining_the_data = dict(zip(city_data, store_list))
-    for key, values in combining_the_data.items():
-        if values in result_in_dictionary.keys():
-            dictionary[key] = values
+        pincode_data_in_location.append(rows[0])
+        city_data_in_location.append(rows[1])
+    # wrapping the primary key and city data in  a dictionary
+    combining_the_data = dict(zip(pincode_data_in_location, city_data_in_location))
+    for key, value in result_in_dictionary.items():
+        temp1 = key
+        temp2 = value
+        # check the each store and assign to corresponding city in the data
+        for keys, values in combining_the_data.items():
+            if temp1 == keys:
+                dictionary[values] = temp2
+            else:
+                continue
     print(dictionary)
 
 
