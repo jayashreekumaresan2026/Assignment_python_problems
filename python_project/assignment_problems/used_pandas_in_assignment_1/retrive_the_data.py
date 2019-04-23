@@ -20,6 +20,7 @@ data_location = pd.read_csv('location.csv')
 # created a global dictionary variable
 dictionary = {}
 
+
 # List all stores which have build_area greater than 4000
 def list_of_stores_greater_than_4000():
     # getting the df data as a input
@@ -206,3 +207,32 @@ def calculate_number_of_stores():
 
 print(calculate_number_of_stores())
 print()
+
+
+#Calculate number of stores  in extension problem each City
+def calculate_number_of_stores():
+    pincode_list_in_store = []
+    for index, rows in data_store.iterrows():
+        pincode_list_in_store.append(rows[3])
+    counting_the_store_occurrence = Counter(pincode_list_in_store)
+    result_in_dictionary = dict(counting_the_store_occurrence)
+    for index, rows in data_location.iterrows():
+        dictionary[rows[0]] = rows[2]
+    country_names = list(set(dictionary.values()))
+    result=country_name_list(country_names, result_in_dictionary)
+    print(result)
+
+
+def country_name_list(country_names, result_in_dictionary):
+    dictionary_list = {}
+    for i in range(len(country_names)):
+        count = 0
+        for keys, values in dictionary.items():
+            pincode = keys
+            if country_names[i] == values:
+                for key, value in result_in_dictionary.items():
+                    if pincode == key:
+                        count += value
+                dictionary_list[country_names[i]] = count
+    return dictionary_list
+calculate_number_of_stores()
