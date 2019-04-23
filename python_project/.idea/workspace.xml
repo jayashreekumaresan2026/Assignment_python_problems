@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14a2e89d-3dfc-44c2-92f4-866d32305c91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/location.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/retrive_data_from_csv_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/store.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment_problems/used_csv_file_assignment_1/location.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/location.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment_problems/used_csv_file_assignment_1/retrive_the_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/retrive_the_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment_problems/used_csv_file_assignment_1/store.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/store.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/retrive_the_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/retrive_the_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/retrive_data_from_csv_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/retrive_data_from_csv_file.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/retrive_the_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="173" lean-forward="true" selection-start-line="150" selection-end-line="173" />
+            <state relative-caret-position="309">
+              <caret line="237" column="28" lean-forward="true" selection-start-line="211" selection-end-line="237" selection-end-column="28" />
               <folding>
                 <element signature="e#404#423#0" expanded="true" />
               </folding>
@@ -44,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/retrive_data_from_csv_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="129" column="41" lean-forward="true" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+            <state relative-caret-position="244">
+              <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -133,9 +128,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="697" />
-    <option name="width" value="669" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="189" />
+    <option name="width" value="1177" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -144,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,12 +150,6 @@
               <item name="python_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_project" type="462c0819:PsiDirectoryNode" />
               <item name="assignment_problems" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_project" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment_problems" type="462c0819:PsiDirectoryNode" />
-              <item name="Assignment_2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python_project" type="b2602c69:ProjectViewProjectNode" />
@@ -179,6 +167,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.retrive_data_from_csv_file">
+  <component name="RunManager" selected="Python.retrive_the_data (2)">
     <configuration name="first_unique_character_in_a_string" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -317,8 +306,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.retrive_data_from_csv_file" />
         <item itemvalue="Python.retrive_the_data (2)" />
+        <item itemvalue="Python.retrive_data_from_csv_file" />
         <item itemvalue="Python.retrive_the_data (1)" />
         <item itemvalue="Python.retrive_the_data" />
         <item itemvalue="Python.first_unique_character_in_a_string" />
@@ -339,21 +328,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="189" y="0" width="1177" height="728" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3139881" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34591746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2831424" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32242227" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33781514" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3210084" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3207856" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2857143" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27659574" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -789,18 +778,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment_problems/Assignment_2/json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/store.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="1000" column="47" selection-start-line="1000" selection-start-column="47" selection-end-line="1000" selection-end-column="47" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/location.csv">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/encodings/cp1252.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -809,13 +792,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/location.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/store.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment_problems/Assignment_2/json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment_problems/used_pandas_in_assignment_1/retrive_the_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="173" lean-forward="true" selection-start-line="150" selection-end-line="173" />
+        <state relative-caret-position="309">
+          <caret line="237" column="28" lean-forward="true" selection-start-line="211" selection-end-line="237" selection-end-column="28" />
           <folding>
             <element signature="e#404#423#0" expanded="true" />
           </folding>
@@ -824,8 +813,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/retrive_data_from_csv_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="129" column="41" lean-forward="true" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+        <state relative-caret-position="244">
+          <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

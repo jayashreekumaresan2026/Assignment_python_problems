@@ -13,9 +13,6 @@ def read_csv_for_location_data():
     with open('location.csv', newline='', encoding='utf-8')as store_data:
         return list(csv.reader(store_data))
 
-
-#
-
 # List all stores which have build_area greater than 4000
 def list_of_stores_greater_than_4000(csv_reader_for_store):
     dictionary = {}
@@ -154,6 +151,35 @@ def calculate_number_of_stores(read_csv_for_store_data,read_csv_for_location_dat
                 continue
     return dictionary
 
+#Calculate number of stores  in extension problem each City
+def calculate_number_of_stores_in_country(csv_reader_for_store,csv_reader_for_location):
+    dictionary={}
+    pincode_list_in_store = []
+    for rows in csv_reader_for_store:
+        pincode_list_in_store.append(rows[3])
+    counting_the_store_occurrence = Counter(pincode_list_in_store)
+    result_in_dictionary = dict(counting_the_store_occurrence)
+    for rows in csv_reader_for_location:
+        dictionary[rows[0]] = rows[2]
+    country_names = list(set(dictionary.values()))
+    result=country_name_list(country_names, result_in_dictionary,dictionary)
+    print(result)
+
+
+def country_name_list(country_names, result_in_dictionary,dictionary):
+    dictionary_list = {}
+    for i in range(len(country_names)):
+        count = 0
+        for keys, values in dictionary.items():
+            pincode = keys
+            if country_names[i] == values:
+                for key, value in result_in_dictionary.items():
+                    if pincode == key:
+                        count += value
+                dictionary_list[country_names[i]] = count
+    return dictionary_list
+
+
 
 def main():
     csv_reader_for_store = read_csv_for_store_data()
@@ -164,6 +190,6 @@ def main():
     print(find_the_store_opened_in_weekend(csv_reader_for_store))
     print(list_store_located_in_z_city(csv_reader_for_store,csv_reader_for_location))
     print(calculate_number_of_stores(csv_reader_for_store,csv_reader_for_location))
-
+    print(calculate_number_of_stores_in_country(csv_reader_for_store,csv_reader_for_location))
 if __name__ == '__main__':
     main()
