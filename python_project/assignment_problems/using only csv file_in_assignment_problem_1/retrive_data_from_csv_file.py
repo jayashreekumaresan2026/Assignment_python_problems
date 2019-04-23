@@ -13,9 +13,6 @@ def read_csv_for_location_data():
     with open('location.csv', newline='', encoding='utf-8')as store_data:
         return list(csv.reader(store_data))
 
-
-#
-
 # List all stores which have build_area greater than 4000
 def list_of_stores_greater_than_4000(csv_reader_for_store):
     dictionary = {}
