@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/retrive_data_from_csv_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+            <state relative-caret-position="1808">
+              <caret line="162" column="37" lean-forward="true" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="37" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -198,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.retrive_the_data (2)">
+  <component name="RunManager" selected="Python.retrive_data_from_csv_file">
     <configuration name="first_unique_character_in_a_string" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -306,8 +306,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.retrive_the_data (2)" />
         <item itemvalue="Python.retrive_data_from_csv_file" />
+        <item itemvalue="Python.retrive_the_data (2)" />
         <item itemvalue="Python.retrive_the_data (1)" />
         <item itemvalue="Python.retrive_the_data" />
         <item itemvalue="Python.first_unique_character_in_a_string" />
@@ -329,22 +329,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="189" y="0" width="1177" height="728" extended-state="1" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34591746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34591746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33781514" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33781514" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3210084" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3207856" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27659574" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.31932774" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27563027" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3277311" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -813,8 +812,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment_problems/using only csv file_in_assignment_problem_1/retrive_data_from_csv_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+        <state relative-caret-position="1808">
+          <caret line="162" column="37" lean-forward="true" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="37" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
