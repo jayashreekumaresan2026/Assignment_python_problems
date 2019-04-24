@@ -220,8 +220,7 @@ def calculate_number_of_stores():
         dictionary[rows[0]] = rows[2]
     country_names = list(set(dictionary.values()))
     result=country_name_list(country_names, result_in_dictionary)
-    print(result)
-
+    return result
 
 def country_name_list(country_names, result_in_dictionary):
     dictionary_list = {}
@@ -236,3 +235,35 @@ def country_name_list(country_names, result_in_dictionary):
                 dictionary_list[country_names[i]] = count
     return dictionary_list
 calculate_number_of_stores()
+
+# Calculate maximum of stores  in extension problem each City
+def maximum_city_count():
+    dictionary = {}
+    dictionary_list = {}
+    pincode_list_in_store = []
+    maximum_country_list=[]
+    for index,rows in data_store.iterrows():
+        pincode_list_in_store.append(rows[3])
+    counting_the_store_occurrence = Counter(pincode_list_in_store)
+    result_in_dictionary = dict(counting_the_store_occurrence)
+    for index,rows in data_location.iterrows():
+        dictionary[rows[0]] = rows[2]
+    country_names = list(set(dictionary.values()))
+    for i in range(len(country_names)):
+        count = 0
+        for keys, values in dictionary.items():
+            pincode = keys
+            if country_names[i] == values:
+                for key, value in result_in_dictionary.items():
+                    if pincode == key:
+                        count += value
+                dictionary_list[country_names[i]] = count
+    maximum_store_country=max(list(dictionary_list.values()))
+    print(maximum_store_country)
+    for i in dictionary_list.values():
+        if i==maximum_store_country:
+            maximum_country_list.append(i)
+    for key ,value in dictionary_list.items():
+        if value in maximum_country_list:
+            return key
+print(maximum_city_count())
