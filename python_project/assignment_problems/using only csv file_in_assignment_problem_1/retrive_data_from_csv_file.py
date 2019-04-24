@@ -10,31 +10,37 @@ def read_csv_for_store_data():
 
 
 def read_csv_for_location_data():
-    with open('location.csv', newline='', encoding='utf-8')as store_data:
+    with open('location.csv', encoding='utf-8')as store_data:
         return list(csv.reader(store_data))
+
 
 # List all stores which have build_area greater than 4000
 def list_of_stores_greater_than_4000(csv_reader_for_store):
-    dictionary = {}
     list_of_store_name = []
     for row in csv_reader_for_store:
-        dictionary[row[0]] = row[1]
-    for key, value in dictionary.items():
-        if value > str(4000):
-            list_of_store_name.append(key)
+        if row[1] > str(4000):
+            list_of_store_name.append(row[0])
     list_of_store_name.pop(0)
-    return list_of_store_name
+    print(list_of_store_name)
 
 
 # Find country having the most number of stores
-i = -1
-def maximum_store_in_a_country(csv_reader_for_store, csv_reader_for_location):
+i =0
+def maximum_store_in_a_country(csv_reader_for_store, csv_reader_for_location,i):
+    sorted_list=[]
     new_list = []
     for rows in csv_reader_for_store:
         new_list.append(str(rows[3]))
     counted_the_occurrences = Counter(new_list)
     converted_into_dictionary = dict(counted_the_occurrences)
-    max_value = sorted(converted_into_dictionary.values())
+    max_value = list(converted_into_dictionary.values())
+    for i in range(0, len(max_value)):
+        for j in range(i + 1, len(max_value)):
+            if max_value[i] < max_value[j]:
+                temp = max_value[i]
+                max_value[i] = max_value[j]
+                max_value[j] = temp
+    print(type(max_value))
     maximum_store_in_the_country(max_value, converted_into_dictionary, i, csv_reader_for_location)
 
 
@@ -43,7 +49,8 @@ def maximum_store_in_the_country(max_value, result_in_dictionary, i, csv_reader_
     country_list = []
     dictionary = {}
     for key, value in result_in_dictionary.items():
-        if value == max_value[i]:
+        print(type(max_value[i]))
+        if value in max_value:
             max_list.append(key)
     for rows in csv_reader_for_location:
         dictionary[rows[1]] = rows[0]
@@ -58,7 +65,7 @@ def maximum_store_in_the_country(max_value, result_in_dictionary, i, csv_reader_
         print(country_list)
 
 
-#  Find the total build_area of all stores built last year
+# Find the total build_area of all stores built last year
 def stores_built_in_last_year(csv_reader_for_store):
     dictionary = {}
     split_the_date = []
@@ -92,14 +99,14 @@ def find_the_store_opened_in_weekend(csv_reader_for_store):
     date_list.pop(0)
     store_list.pop(0)
     for date in date_list:
-         month, day, year = (int(x) for x in date.split('/'))
-         if year == 00:
-             year=int(2000)
-             result=datetime.date(year,month,day)
-             week_days_name_list.append(result.strftime("%A"))
-         else:
-             result = datetime.date(year, month, day)
-             week_days_name_list.append(result.strftime("%A"))
+        month, day, year = (int(x) for x in date.split('/'))
+        if year == 00:
+            year = int(2000)
+            result = datetime.date(year, month, day)
+            week_days_name_list.append(result.strftime("%A"))
+        else:
+            result = datetime.date(year, month, day)
+            week_days_name_list.append(result.strftime("%A"))
     combining_the_dict = dict(zip(store_list, week_days_name_list))
     for key, value in combining_the_dict.items():
         if value in check_list:
@@ -108,11 +115,11 @@ def find_the_store_opened_in_weekend(csv_reader_for_store):
 
 
 # List stores which are located in a city containing character `z` in it
-def list_store_located_in_z_city(read_csv_for_store_data,read_csv_for_location_data):
+def list_store_located_in_z_city(read_csv_for_store_data, read_csv_for_location_data):
     city_name_list = []
     store_name_list = []
     output_store_list = []
-    for  rows in read_csv_for_store_data:
+    for rows in read_csv_for_store_data:
         store_name_list.append(rows[0])
     finding_the_occurrence_of_store_in_the_file = Counter(store_name_list)
     converting_into_dictionary = dict(finding_the_occurrence_of_store_in_the_file)
@@ -126,10 +133,9 @@ def list_store_located_in_z_city(read_csv_for_store_data,read_csv_for_location_d
     return output_store_list
 
 
-
-#Calculate number of stores in each City
-def calculate_number_of_stores(read_csv_for_store_data,read_csv_for_location_data):
-    dictionary={}
+# Calculate number of stores in each City
+def calculate_number_of_stores(read_csv_for_store_data, read_csv_for_location_data):
+    dictionary = {}
     pincode_list_in_store = []
     pincode_data_in_location = []
     city_data_in_location = []
@@ -137,7 +143,7 @@ def calculate_number_of_stores(read_csv_for_store_data,read_csv_for_location_dat
         pincode_list_in_store.append(rows[3])
     counting_the_store_occurrence = Counter(pincode_list_in_store)
     result_in_dictionary = dict(counting_the_store_occurrence)
-    for  rows in read_csv_for_location_data:
+    for rows in read_csv_for_location_data:
         pincode_data_in_location.append(rows[0])
         city_data_in_location.append(rows[2])
     combining_the_data = dict(zip(pincode_data_in_location, city_data_in_location))
@@ -151,9 +157,10 @@ def calculate_number_of_stores(read_csv_for_store_data,read_csv_for_location_dat
                 continue
     return dictionary
 
-#Calculate number of stores  in extension problem each City
-def calculate_number_of_stores_in_country(csv_reader_for_store,csv_reader_for_location):
-    dictionary={}
+
+# Calculate number of stores  in extension problem each City
+def calculate_number_of_stores_in_country(csv_reader_for_store, csv_reader_for_location):
+    dictionary = {}
     pincode_list_in_store = []
     for rows in csv_reader_for_store:
         pincode_list_in_store.append(rows[3])
@@ -162,11 +169,11 @@ def calculate_number_of_stores_in_country(csv_reader_for_store,csv_reader_for_lo
     for rows in csv_reader_for_location:
         dictionary[rows[0]] = rows[2]
     country_names = list(set(dictionary.values()))
-    result=country_name_list(country_names, result_in_dictionary,dictionary)
-    print(result)
+    result = country_name_list(country_names, result_in_dictionary, dictionary)
+    return result
 
 
-def country_name_list(country_names, result_in_dictionary,dictionary):
+def country_name_list(country_names, result_in_dictionary, dictionary):
     dictionary_list = {}
     for i in range(len(country_names)):
         count = 0
@@ -180,16 +187,50 @@ def country_name_list(country_names, result_in_dictionary,dictionary):
     return dictionary_list
 
 
+# Calculate maximum of stores  in extension problem each City
+def maximum_city_count(csv_reader_for_store, csv_reader_for_location):
+    dictionary = {}
+    dictionary_list = {}
+    pincode_list_in_store = []
+    maximum_country_list=[]
+    for rows in csv_reader_for_store:
+        pincode_list_in_store.append(rows[3])
+    counting_the_store_occurrence = Counter(pincode_list_in_store)
+    result_in_dictionary = dict(counting_the_store_occurrence)
+    for rows in csv_reader_for_location:
+        dictionary[rows[0]] = rows[2]
+    country_names = list(set(dictionary.values()))
+    for i in range(len(country_names)):
+        count = 0
+        for keys, values in dictionary.items():
+            pincode = keys
+            if country_names[i] == values:
+                for key, value in result_in_dictionary.items():
+                    if pincode == key:
+                        count += value
+                dictionary_list[country_names[i]] = count
+    maximum_store_country=max(list(dictionary_list.values()))
+    print(maximum_store_country)
+    for i in dictionary_list.values():
+        if i==maximum_store_country:
+            maximum_country_list.append(i)
+    for key ,value in dictionary_list.items():
+        if value in maximum_country_list:
+            return key
 
+# main function
 def main():
     csv_reader_for_store = read_csv_for_store_data()
-    print( list_of_stores_greater_than_4000(csv_reader_for_store))
+    print(list_of_stores_greater_than_4000(csv_reader_for_store))
     csv_reader_for_location = read_csv_for_location_data()
-    print(maximum_store_in_a_country(csv_reader_for_store, csv_reader_for_location))
-    print( stores_built_in_last_year(csv_reader_for_store))
+    print(maximum_store_in_a_country(csv_reader_for_store, csv_reader_for_location,i))
+    print(stores_built_in_last_year(csv_reader_for_store))
     print(find_the_store_opened_in_weekend(csv_reader_for_store))
-    print(list_store_located_in_z_city(csv_reader_for_store,csv_reader_for_location))
-    print(calculate_number_of_stores(csv_reader_for_store,csv_reader_for_location))
-    print(calculate_number_of_stores_in_country(csv_reader_for_store,csv_reader_for_location))
+    print(list_store_located_in_z_city(csv_reader_for_store, csv_reader_for_location))
+    print(calculate_number_of_stores(csv_reader_for_store, csv_reader_for_location))
+    print(calculate_number_of_stores_in_country(csv_reader_for_store, csv_reader_for_location))
+    print(maximum_city_count(csv_reader_for_store, csv_reader_for_location))
+
+
 if __name__ == '__main__':
     main()
