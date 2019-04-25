@@ -1,5 +1,6 @@
 {
-  "lang": "en",
+  "lang":"en",
+  "format":"json",
   "delay": 30
 }
 

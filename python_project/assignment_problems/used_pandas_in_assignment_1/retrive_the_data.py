@@ -236,7 +236,7 @@ def country_name_list(country_names, result_in_dictionary):
     return dictionary_list
 calculate_number_of_stores()
 
-# Calculate maximum of stores  in extension problem each City
+# Calculate maximum of stores  in extension problem each Country
 def maximum_city_count():
     dictionary = {}
     dictionary_list = {}

@@ -49,8 +49,7 @@ def maximum_store_in_the_country(max_value, result_in_dictionary, i, csv_reader_
     country_list = []
     dictionary = {}
     for key, value in result_in_dictionary.items():
-        print(type(max_value[i]))
-        if value in max_value:
+        if value == max_value[i]:
             max_list.append(key)
     for rows in csv_reader_for_location:
         dictionary[rows[1]] = rows[0]
@@ -194,12 +193,13 @@ def maximum_city_count(csv_reader_for_store, csv_reader_for_location):
     pincode_list_in_store = []
     maximum_country_list=[]
     for rows in csv_reader_for_store:
+        print(rows)
         pincode_list_in_store.append(rows[3])
     counting_the_store_occurrence = Counter(pincode_list_in_store)
     result_in_dictionary = dict(counting_the_store_occurrence)
     for rows in csv_reader_for_location:
         dictionary[rows[0]] = rows[2]
-    country_names = list(set(dictionary.values()))
+    country_names =list(set(dictionary.values()))
     for i in range(len(country_names)):
         count = 0
         for keys, values in dictionary.items():
