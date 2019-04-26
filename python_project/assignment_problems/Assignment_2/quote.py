@@ -28,14 +28,14 @@ def print_quotes_for_30m():
                     text_recieved = response.text
                     xmltodicts = json.loads(json.dumps(xmltodict.parse(text_recieved)))
                     quote_text = xmltodicts["forismatic"]['quote']
-                    quotes_text_int_list = list(quote_text.values())
-                    if quotes_text_int_list[1] == None:
-                        quotes_text_int_list[1] = "UNKNOWN_AUTHOR"
-                        print("AUTHOR: {} SAYS: {}".format(quotes_text_int_list[1], quotes_text_int_list[0]))
+                    quotes_text_in_list = list(quote_text.values())
+                    if quotes_text_in_list[1] == None:
+                        quotes_text_in_list[1] = "UNKNOWN_AUTHOR"
+                        print("AUTHOR: {} SAYS: {}".format(quotes_text_in_list[1], quotes_text_in_list[0]))
                         sleep(values_in_dictionary[2])
 
                     else:
-                        print("AUTHOR: {} SAYS: {}".format(quotes_text_int_list[1], quotes_text_int_list[0]))
+                        print("AUTHOR: {} SAYS: {}".format(quotes_text_in_list[1], quotes_text_in_list[0]))
                     sleep(values_in_dictionary[2])
 
 
