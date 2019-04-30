@@ -9,6 +9,7 @@ def print_quotes_for_time(test_Case):
     while True:
         with open(test_Case) as jsonfile:
             jsoncontent = json.load(jsonfile)
+            #timing must be in the format for year /y ,hour/h,minutes/m,seconds/s specify space timing between the timing
             user_input= jsoncontent["delay"]
             new_time_list = []
             total_seconds = 0
