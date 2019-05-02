@@ -5,20 +5,20 @@ from time import sleep
 import xmltodict as xmltodict
 
 
-def open_the_json_file(test_Case):
-    # file=open(test_Case,"r")
-    # jsoncontent = json.loads(jsoncontent)
-    # file.close()
-    with open(test_Case) as jsonfile:
-        jsoncontent = jsonfile.read()
-    print(jsonfile.closed)
-    jsoncontent = json.loads(jsoncontent)
-    language = jsoncontent["lang"]
-    format = jsoncontent["format"]
-    # timing must be in the format for year /y ,hour/h,minutes/m,seconds/s specify space timing between the timing
-    user_input = jsoncontent["delay"]
-    total_seconds = timing_split(user_input)
-    print_quotes_for_time(jsoncontent, total_seconds, language, format)
+# def open_the_json_file(test_Case):
+#     # file=open(test_Case,"r")
+#     # jsoncontent = json.loads(jsoncontent)
+#     # file.close()
+#     with open(test_Case) as jsonfile:
+#         jsoncontent = jsonfile.read()
+#     print(jsonfile.closed)
+#     jsoncontent = json.loads(jsoncontent)
+#     language = jsoncontent["lang"]
+#     format = jsoncontent["format"]
+#     # timing must be in the format for year /y ,hour/h,minutes/m,seconds/s specify space timing between the timing
+#     user_input = jsoncontent["delay"]
+#     total_seconds = timing_split(user_input)
+#     print_quotes_for_time(jsoncontent, total_seconds, language, format)
 
 
 def print_quotes_for_time(jsoncontent, total_seconds, language, format):
@@ -29,7 +29,7 @@ def print_quotes_for_time(jsoncontent, total_seconds, language, format):
             format = "json"
         if jsoncontent["lang"] in user_language:
             if format == "json":
-                author, quotes = common_response(language, total_seconds, jsoncontent)
+                author, quotes = common_response(jsoncontent, total_seconds, language, format)
                 print("Author :" + author + " says:" + quotes)
                 sleep(total_seconds)
             else:
@@ -49,7 +49,7 @@ def to_print_the_resultant_quotes(quotes, total_seconds):
     sleep(total_seconds)
 
 
-def common_response(language, total_seconds, jsoncontent):
+def common_response(jsoncontent, total_seconds, language, format):
     text_recieved = extract_quotes_from_site(jsoncontent)
     if language == "en":
         quoteObj = json.loads(bytes(text_recieved, "utf-8").decode("unicode_escape"))
@@ -64,7 +64,7 @@ def extract_the_text(text_recieved, total_seconds):
     author_name = text_recieved["quoteAuthor"]
     quote_message = text_recieved["quoteText"]
     if author_name == '':
-        to_print_the_resultant_quotes(author_name, quote_message, total_seconds)
+        to_print_the_resultant_quotes( quote_message, total_seconds)
     else:
         return author_name, quote_message
 

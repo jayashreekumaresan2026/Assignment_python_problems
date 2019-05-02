@@ -28,9 +28,11 @@ def print_quotes_in_delay(test_Case):
             extract_the_year = user_input[
                                len(extract_the_min) + 1 + len(extract_the_year) + 1 + len(extract_the_hour) + 1:sec]
             time_list.append(extract_the_year)
-            print(time_list)
-            combine_the_list = dict(zip(time_format,time_list))
-            print(combine_the_list)
+            for i in time_list:
+                if i == "":
+                    find_index = time_list.index(i)
+                    time_list[find_index] = '0'
+            combine_the_list = dict(zip(time_format, time_list))
             for key, value in combine_the_list.items():
                 if key == 'y' and int(combine_the_list[key]) != 0:
                     total_seconds = +int(combine_the_list[key]) * 365 * 24 * 60 * 60
